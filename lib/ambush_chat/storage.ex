@@ -2,6 +2,7 @@ defmodule AmbushChat.Storage do
   use GenServer
 
   alias AmbushChat.Message
+  alias AmbushChatWeb.Endpoint
 
   def start_link(opts \\ []),
     do: GenServer.start_link(__MODULE__, opts, name: __MODULE__)
@@ -23,6 +24,8 @@ defmodule AmbushChat.Storage do
   def handle_cast({:create_message, message = %Message{}}, state) do
     messages_updated_list = [message | state.messages]
     state = %{state | messages: messages_updated_list}
+
+    :ok = AmbushChat.publish(message)
 
     {:noreply, state}
   end
