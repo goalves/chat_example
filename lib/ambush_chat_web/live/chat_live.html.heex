@@ -2,3 +2,7 @@
   <h1>Ambush Chat!</h1>
   <p>Write something, maybe it will show up</p>
 </section>
+
+<%= for message <- @messages do %>
+  <div class="message" id={message.id} > <%= message.text %> </div>
+<% end %>
