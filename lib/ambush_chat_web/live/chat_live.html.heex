@@ -3,6 +3,8 @@
   <p>Write something, maybe it will show up</p>
 </section>
 
-<%= for message <- @messages do %>
-  <div class="message" id={message.id} > <%= message.text %> </div>
-<% end %>
+<div class="message-div" >
+  <%= for message <- @messages do %>
+    <div class="message-box" id={message.id} > <%= message.text %> </div>
+  <% end %>
+</div>

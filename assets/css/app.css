@@ -87,3 +87,26 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.message-div {
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  display: flex;
+}
+
+.message-box {
+  width: 100%;
+
+  border-radius: 4px;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  margin-bottom: 10px;
+
+  min-height: 4vh;
+  max-width: 80vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
