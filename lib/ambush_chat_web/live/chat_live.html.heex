@@ -8,8 +8,10 @@
   <%= submit "Send" %>
 </.form>
 
-<div class="message-container" >
+<div class="message-container" phx-update="prepend">
   <%= for message <- @messages do %>
-    <div class="message-box" id={message.id} > <%= message.text %> </div>
+    <div class="message-box" id={message.id} >
+      <%= message.text %>
+    </div>
   <% end %>
 </div>
