@@ -13,9 +13,9 @@ defmodule AmbushChat.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: AmbushChat.PubSub},
       # Start the Endpoint (http/https)
-      AmbushChatWeb.Endpoint
+      AmbushChatWeb.Endpoint,
       # Start a worker by calling: AmbushChat.Worker.start_link(arg)
-      # {AmbushChat.Worker, arg}
+      AmbushChat.Storage
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
